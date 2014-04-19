@@ -6,6 +6,7 @@
 #
 # Pods/
 
+<<<<<<< HEAD
 
 # Xcode
 #
@@ -47,3 +48,5 @@ Icon
 Network Trash Folder
 Temporary Items
 .apdisk
+=======
+>>>>>>> 75557a3adaaf10cf608bb0cc2c7e05f5d4601caa
