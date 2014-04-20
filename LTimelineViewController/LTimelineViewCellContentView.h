@@ -10,6 +10,7 @@
 
 @interface LTimelineViewCellContentView : UIView
 
-@property (assign, nonatomic) NSDictionary * contents;
+@property (retain, nonatomic) NSString * type;
+@property (retain, nonatomic) NSMutableAttributedString * text;
 
 @end

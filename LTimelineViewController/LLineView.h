@@ -11,6 +11,7 @@
 @interface LLineView : UIView
 
 @property (assign, nonatomic) BOOL showsTopPart;
+@property (assign, nonatomic) CGFloat lineHeight;
 @property (copy, nonatomic) NSString *text;
 
 

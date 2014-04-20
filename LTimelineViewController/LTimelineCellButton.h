@@ -13,5 +13,6 @@
 
 @property (retain, nonatomic) NSString * count;
 @property (retain, nonatomic) NSString * icon;
+@property (assign, nonatomic) BOOL showButton;
 
 @end

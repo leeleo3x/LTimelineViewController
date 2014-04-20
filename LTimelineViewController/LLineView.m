@@ -31,6 +31,12 @@
     [self setNeedsDisplay];
 }
 
+- (void)setLineHeight:(CGFloat)lineHeight
+{
+    _lineHeight = lineHeight;
+    [self setNeedsDisplay];
+}
+
 - (void)drawRect:(CGRect)rect
 {
     CGContextRef context = UIGraphicsGetCurrentContext();
@@ -47,7 +53,7 @@
     CGContextStrokePath(context);
     
     CGContextMoveToPoint(context, 39, 91);
-    CGContextAddLineToPoint(context, 39, 205);
+    CGContextAddLineToPoint(context, 39, 91+_lineHeight);
     CGContextSetLineWidth(context, 1.2);
     CGContextSetStrokeColorWithColor(context, [UIColor grayColor].CGColor);
     CGContextStrokePath(context);

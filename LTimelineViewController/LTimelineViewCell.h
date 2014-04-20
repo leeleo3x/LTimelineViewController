@@ -20,7 +20,8 @@
 @property (strong, nonatomic) LLineView * lineView;
 @property (strong, nonatomic) LTimelineViewCellContentView * cellContentView;
 
-@property (retain, nonatomic) NSDictionary * content;
+@property (retain, nonatomic) NSString * type;
+@property (retain, nonatomic) NSMutableAttributedString * text;
 
 @property (strong, nonatomic, readonly) LTimelineCellButton * favouriteButton;
 @property (strong, nonatomic, readonly) LTimelineCellButton * retweetButton;

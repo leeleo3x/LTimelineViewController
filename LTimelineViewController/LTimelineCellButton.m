@@ -37,21 +37,20 @@
     [self setTitle:s forState:UIControlStateNormal];
 }
 
-//- (void)drawRect:(CGRect)rect
-//{
-//    if (CGRectIsEmpty(rect)) {
-//        return;
-//    }
-//    CGPoint iconPosition = CGPointMake((rect.size.width * 0.375 - _icon.size.width)/2, (rect.size.height - _icon.size.height)/2);
-//    CGRect titleRect = CGRectMake(rect.size.width * 0.375, 0, rect.size.width * 0.625, rect.size.height);
-//    [_icon drawAtPoint:iconPosition];
-//    [_count drawInRect:titleRect withFont:[UIFont systemFontOfSize:16] lineBreakMode:NSLineBreakByTruncatingTail alignment:NSTextAlignmentCenter];
-//    
-//    UIColor *color = self.highlighted | self.selected ? [UIColor colorWithRed:0.0f/255.0f green:126.0f/255.0f blue:246.0f/255.0f alpha:1] : [UIColor colorWithRed:204.0f/255.0f green:204.0f/255.0f blue:204.0f/255.0f alpha:1];
-//    CGContextRef context = UIGraphicsGetCurrentContext();
-//    CGContextSetFillColorWithColor(context, color.CGColor);
-//    CGContextSetBlendMode(context, kCGBlendModeSourceIn);
-//    CGContextFillRect(context, rect);
-//}
+- (void)drawRect:(CGRect)rect
+{
+    if (CGRectIsEmpty(rect)) {
+        return;
+    }
+    if (_showButton) {
+        CGContextRef context = UIGraphicsGetCurrentContext();
+        
+        CGContextAddEllipseInRect(context, CGRectMake(rect.size.width - 3, rect.size.height / 2 - 1, 2, 2));
+        CGContextSetLineWidth(context, 2);
+        CGContextSetStrokeColorWithColor(context, [UIColor grayColor].CGColor);
+        CGContextStrokePath(context);
+    }
+    
+}
 
 @end

@@ -48,32 +48,60 @@
     NSMutableDictionary
     * tmp = @{@"avatarImageView":@"image",
               @"authorLabel":@"leeleo3x",
-              @"ifFavorite":@NO}.mutableCopy;
+              @"ifFavorite":@NO,
+              @"content":
+                  @{@"type":@"text",
+                    @"text": @"hahhahahahhahahahah"}}.mutableCopy;
     [_objects addObject:tmp];
     tmp = @{@"avatarImageView":@"image",
             @"authorLabel":@"richard1122",
             @"ifFavorite":@NO}.mutableCopy;
-    
+    tmp = @{@"avatarImageView":@"image",
+              @"authorLabel":@"leeleo3x",
+              @"ifFavorite":@NO,
+              @"content":
+                  @{@"type":@"text",
+                    @"text": @"hahhahahahhahahahah"}}.mutableCopy;
     [_objects addObject:tmp];
     tmp = @{@"avatarImageView":@"image",
             @"authorLabel":@"richard1122",
             @"ifFavorite":@NO}.mutableCopy;
-    
+    tmp = @{@"avatarImageView":@"image",
+              @"authorLabel":@"leeleo3x",
+              @"ifFavorite":@NO,
+              @"content":
+                  @{@"type":@"text",
+                    @"text": @"hahhahahahhahahahah"}}.mutableCopy;
     [_objects addObject:tmp];
     tmp = @{@"avatarImageView":@"image",
             @"authorLabel":@"richard1122",
             @"ifFavorite":@NO}.mutableCopy;
-    
+    tmp = @{@"avatarImageView":@"image",
+              @"authorLabel":@"leeleo3x",
+              @"ifFavorite":@NO,
+              @"content":
+                  @{@"type":@"text",
+                    @"text": @"hahhahahahhahahahah"}}.mutableCopy;
     [_objects addObject:tmp];
     tmp = @{@"avatarImageView":@"image",
             @"authorLabel":@"richard1122",
             @"ifFavorite":@NO}.mutableCopy;
-    
+    tmp = @{@"avatarImageView":@"image",
+              @"authorLabel":@"leeleo3x",
+              @"ifFavorite":@NO,
+              @"content":
+                  @{@"type":@"text",
+                    @"text": @"hahhahahadsajfklasjdvklxncvjkajiodfjeowfmoawejfiovaejwdiovjasovjnoaefdvjioaehgvoiaerhgiovajhefogvjhaneoigviaoerhfhhahahahah"}}.mutableCopy;
     [_objects addObject:tmp];
     tmp = @{@"avatarImageView":@"image",
             @"authorLabel":@"richard1122",
             @"ifFavorite":@NO}.mutableCopy;
-    
+    tmp = @{@"avatarImageView":@"image",
+              @"authorLabel":@"leeleo3x",
+              @"ifFavorite":@NO,
+              @"content":
+                  @{@"type":@"text",
+                    @"text": @"hahhahahahhahahahah"}}.mutableCopy;
     [_objects addObject:tmp];
     
 }
@@ -88,7 +116,14 @@
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    return 208;
+    CGRect contentSize;
+
+    NSAttributedString * s = [[NSAttributedString alloc] initWithString:_objects[indexPath.row][@"content"][@"text"] attributes:@{NSFontAttributeName: [UIFont systemFontOfSize:15], NSForegroundColorAttributeName: [UIColor grayColor]}];
+
+    contentSize = [s boundingRectWithSize:CGSizeMake(223, CGFLOAT_MAX) options:NSStringDrawingUsesLineFragmentOrigin context:nil];
+ 
+    NSLog(@"%f", contentSize.size.height);
+    return 117 + contentSize.size.height;
 }
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
@@ -112,10 +147,10 @@
     //  {
     //    cell = [[LTimelineViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:CellIdentifier];
     
-//    if ([cell respondsToSelector:@selector(setSeparatorInset:)]) {
-//        cell.separatorInset = UIEdgeInsetsZero;
-//        [cell setSelectionStyle:UITableViewCellSelectionStyleDefault];
-//    }
+    //    if ([cell respondsToSelector:@selector(setSeparatorInset:)]) {
+    //        cell.separatorInset = UIEdgeInsetsZero;
+    //        [cell setSelectionStyle:UITableViewCellSelectionStyleDefault];
+    //    }
     //}
     
     [self setCell:cell forRowAtIndexOfPath:indexPath];
@@ -124,7 +159,6 @@
 
 - (void)setCell:(LTimelineViewCell *)cell forRowAtIndexOfPath:(NSIndexPath *)indexPath
 {
-    
     //[cell createView];
     if (indexPath.row != 0) {
         cell.lineView.showsTopPart = YES;
@@ -134,6 +168,13 @@
     
     cell.authorLabel.text = _objects[indexPath.row][@"authorLabel"];
     cell.avatarImageView.image = [UIImage imageNamed:@"image.jpeg"];
+    _objects[indexPath.row][@"type"] = _objects[indexPath.row][@"content"][@"type"];
+    _objects[indexPath.row][@"text"] = [[NSMutableAttributedString alloc]
+                                        initWithString:_objects[indexPath.row][@"content"][@"text"]
+                                        attributes:@{NSFontAttributeName: [UIFont systemFontOfSize:15], NSForegroundColorAttributeName: [UIColor grayColor]}];
+    
+    cell.type = _objects[indexPath.row][@"type"];
+    cell.text = _objects[indexPath.row][@"text"];
     
     if ([_objects[indexPath.row][@"ifFavorite"] boolValue] == YES) {
         cell.favouriteButton.selected = YES;
