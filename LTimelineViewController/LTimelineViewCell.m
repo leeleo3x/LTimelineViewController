@@ -69,9 +69,9 @@
     
     //[self.contentView setFrame:CGRectMake(0, 0, bounds.size.width, 208)];
     
-    _favouriteButton.frame = CGRectMake(70, bounds.size.height - 20, 60, 20);
-    _replyButton.frame = CGRectMake(70 + 40 + 20, bounds.size.height - 20, 60, 20);
-    _retweetButton.frame = CGRectMake(70 + 80 + 40, bounds.size.height - 20, 60, 20);
+    _favouriteButton.frame = CGRectMake(70, bounds.size.height - 30, 60, 20);
+    _replyButton.frame = CGRectMake(70 + 40 + 20, bounds.size.height - 30, 60, 20);
+    _retweetButton.frame = CGRectMake(70 + 80 + 40, bounds.size.height - 30, 60, 20);
     
     [_lineView setFrame:CGRectMake(0, 0, 60, 208)];
     [_lineView setBackgroundColor:[UIColor clearColor]];

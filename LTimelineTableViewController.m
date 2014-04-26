@@ -11,7 +11,6 @@
 
 @interface LTimelineTableViewController () <LTimelineCellViewDelegate>
 
-@property (strong, nonatomic) LTimelineViewCell * cell;
 @property (strong, nonatomic) NSMutableArray * objects;
 
 @end
@@ -51,57 +50,57 @@
               @"ifFavorite":@NO,
               @"content":
                   @{@"type":@"text",
-                    @"text": @"hahhahahahhahahahah"}}.mutableCopy;
+                    @"text": @"《打造最佳开发团队的几点建议》1.你需要构建的是一个团队而非一群人。2.不要害怕修改团队的组织架构。和运动一样，队员间的化学反应非常重要！3.致力于自己关心的工作通常也能带来更高的工作效率。3.没有任何人愿意做的事，应该让所有人都轮流去做。"}}.mutableCopy;
     [_objects addObject:tmp];
     tmp = @{@"avatarImageView":@"image",
             @"authorLabel":@"richard1122",
             @"ifFavorite":@NO}.mutableCopy;
     tmp = @{@"avatarImageView":@"image",
-              @"authorLabel":@"leeleo3x",
-              @"ifFavorite":@NO,
-              @"content":
-                  @{@"type":@"text",
-                    @"text": @"hahhahahahhahahahah"}}.mutableCopy;
+            @"authorLabel":@"richard1122",
+            @"ifFavorite":@NO,
+            @"content":
+                @{@"type":@"text",
+                  @"text": @"《打造最佳开发团队的几点建议》1.你需要构建的是一个团队而非一群人。2.不要害怕修改团队的组织架构。和运动一样，队员间的化学反应非常重要！3.致力于自己关心的工作通常也能带来更高的工作效率。3.没有任何人愿意做的事，应该让所有人都轮流去做。"}}.mutableCopy;
     [_objects addObject:tmp];
     tmp = @{@"avatarImageView":@"image",
             @"authorLabel":@"richard1122",
             @"ifFavorite":@NO}.mutableCopy;
     tmp = @{@"avatarImageView":@"image",
-              @"authorLabel":@"leeleo3x",
-              @"ifFavorite":@NO,
-              @"content":
-                  @{@"type":@"text",
-                    @"text": @"hahhahahahhahahahah"}}.mutableCopy;
+            @"authorLabel":@"richard1122",
+            @"ifFavorite":@NO,
+            @"content":
+                @{@"type":@"text",
+                  @"text": @"《打造最佳开发团队的几点建议》1.你需要构建的是一个团队而非一群人。2.不要害怕修改团队的组织架构。和运动一样，队员间的化学反应非常重要！3.致力于自己关心的工作通常也能带来更高的工作效率。3.没有任何人愿意做的事，应该让所有人都轮流去做。"}}.mutableCopy;
     [_objects addObject:tmp];
     tmp = @{@"avatarImageView":@"image",
             @"authorLabel":@"richard1122",
             @"ifFavorite":@NO}.mutableCopy;
     tmp = @{@"avatarImageView":@"image",
-              @"authorLabel":@"leeleo3x",
-              @"ifFavorite":@NO,
-              @"content":
-                  @{@"type":@"text",
-                    @"text": @"hahhahahahhahahahah"}}.mutableCopy;
+            @"authorLabel":@"leeleo3x",
+            @"ifFavorite":@NO,
+            @"content":
+                @{@"type":@"text",
+                  @"text": @"《打造最佳开发团队的几点建议》1.你需要构建的是一个团队而非一群人。2.不要害怕修改团队的组织架构。和运动一样，队员间的化学反应非常重要！3.致力于自己关心的工作通常也能带来更高的工作效率。3.没有任何人愿意做的事，应该让所有人都轮流去做。"}}.mutableCopy;
     [_objects addObject:tmp];
     tmp = @{@"avatarImageView":@"image",
             @"authorLabel":@"richard1122",
             @"ifFavorite":@NO}.mutableCopy;
     tmp = @{@"avatarImageView":@"image",
-              @"authorLabel":@"leeleo3x",
-              @"ifFavorite":@NO,
-              @"content":
-                  @{@"type":@"text",
-                    @"text": @"hahhahahadsajfklasjdvklxncvjkajiodfjeowfmoawejfiovaejwdiovjasovjnoaefdvjioaehgvoiaerhgiovajhefogvjhaneoigviaoerhfhhahahahah"}}.mutableCopy;
+            @"authorLabel":@"leeleo3x",
+            @"ifFavorite":@NO,
+            @"content":
+                @{@"type":@"text",
+                  @"text": @"《打造最佳开发团队的几点建议》1.你需要构建的是一个团队而非一群人。2.不要害怕修改团队的组织架构。和运动一样，队员间的化学反应非常重要！3.致力于自己关心的工作通常也能带来更高的工作效率。3.没有任何人愿意做的事，应该让所有人都轮流去做。"}}.mutableCopy;
     [_objects addObject:tmp];
     tmp = @{@"avatarImageView":@"image",
             @"authorLabel":@"richard1122",
             @"ifFavorite":@NO}.mutableCopy;
     tmp = @{@"avatarImageView":@"image",
-              @"authorLabel":@"leeleo3x",
-              @"ifFavorite":@NO,
-              @"content":
-                  @{@"type":@"text",
-                    @"text": @"hahhahahahhahahahah"}}.mutableCopy;
+            @"authorLabel":@"leeleo3x",
+            @"ifFavorite":@NO,
+            @"content":
+                @{@"type":@"text",
+                  @"text": @"《打造最佳开发团队的几点建议》1.你需要构建的是一个团队而非一群人。2.不要害怕修改团队的组织架构。和运动一样，队员间的化学反应非常重要！3.致力于自己关心的工作通常也能带来更高的工作效率。3.没有任何人愿意做的事，应该让所有人都轮流去做。"}}.mutableCopy;
     [_objects addObject:tmp];
     
 }
@@ -117,12 +116,11 @@
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     CGRect contentSize;
-
+    
     NSAttributedString * s = [[NSAttributedString alloc] initWithString:_objects[indexPath.row][@"content"][@"text"] attributes:@{NSFontAttributeName: [UIFont systemFontOfSize:15], NSForegroundColorAttributeName: [UIColor grayColor]}];
-
+    
     contentSize = [s boundingRectWithSize:CGSizeMake(223, CGFLOAT_MAX) options:NSStringDrawingUsesLineFragmentOrigin context:nil];
- 
-    NSLog(@"%f", contentSize.size.height);
+    
     return 117 + contentSize.size.height;
 }
 
@@ -139,18 +137,18 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    static NSString *CellIdentifier = @"Cell";
+    static NSString *cellIdentifier = @"Cell";
     
-    LTimelineViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
+    LTimelineViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellIdentifier forIndexPath:indexPath];
     
     //    if (! cell)
     //  {
     //    cell = [[LTimelineViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:CellIdentifier];
     
-    //    if ([cell respondsToSelector:@selector(setSeparatorInset:)]) {
-    //        cell.separatorInset = UIEdgeInsetsZero;
-    //        [cell setSelectionStyle:UITableViewCellSelectionStyleDefault];
-    //    }
+    if ([cell respondsToSelector:@selector(setSeparatorInset:)]) {
+        cell.separatorInset = UIEdgeInsetsZero;
+        [cell setSelectionStyle:UITableViewCellSelectionStyleDefault];
+    }
     //}
     
     [self setCell:cell forRowAtIndexOfPath:indexPath];
@@ -186,11 +184,6 @@
     [cell.replyButton addTarget:self action:@selector(replyButtonAction:) forControlEvents:UIControlEventTouchUpInside];
     [cell.retweetButton addTarget:self action:@selector(retweetButtonAction:) forControlEvents:UIControlEventTouchUpInside];
     
-    if (indexPath.row == 0) {
-        
-    } else {
-        
-    }
 }
 
 #pragma mark - Table view delegate
