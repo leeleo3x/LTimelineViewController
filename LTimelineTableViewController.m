@@ -29,13 +29,6 @@
 - (void)loadView
 {
     [super loadView];
-    
-    CGRect bounds = self.view.bounds;
-    
-    UIView *backgroundView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, bounds.size.width, bounds.size.width)];
-    [backgroundView setBackgroundColor:[UIColor grayColor]];
-    [self.tableView setBackgroundView:backgroundView];
-    
     [self.tableView registerClass:[LTimelineViewCell class] forCellReuseIdentifier:@"Cell"];
 }
 
@@ -102,7 +95,6 @@
                 @{@"type":@"text",
                   @"text": @"《打造最佳开发团队的几点建议》1.你需要构建的是一个团队而非一群人。2.不要害怕修改团队的组织架构。和运动一样，队员间的化学反应非常重要！3.致力于自己关心的工作通常也能带来更高的工作效率。3.没有任何人愿意做的事，应该让所有人都轮流去做。"}}.mutableCopy;
     [_objects addObject:tmp];
-    
 }
 
 - (void)didReceiveMemoryWarning
@@ -179,6 +171,7 @@
     } else {
         cell.favouriteButton.selected = NO;
     }
+    cell.backgroundColor = [UIColor clearColor];
     
     [cell.favouriteButton addTarget:self action:@selector(favouriteButtonAction:) forControlEvents:UIControlEventTouchUpInside];
     [cell.replyButton addTarget:self action:@selector(replyButtonAction:) forControlEvents:UIControlEventTouchUpInside];
